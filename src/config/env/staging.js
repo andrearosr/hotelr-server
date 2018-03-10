@@ -1,7 +1,7 @@
 import path from "path";
 
 export const dbConfig = {
-  db: "mongodb://hotelr:hotelr@ds111059.mlab.com:11059/hotelr"
+  db: "mongodb://hotelr:hotelr@ds263948.mlab.com:63948/heroku_3rbqp1qn"
 };
 
 export const appConfig = {
