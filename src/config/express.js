@@ -1,0 +1,65 @@
+import path from "path";
+import express from "express";
+import morgan from "morgan";
+import cors from "cors";
+import bodyParser from "body-parser";
+import methodOverride from "method-override";
+import swaggerDoc from "swagger-jsdoc";
+import swaggerTools from "swagger-tools";
+
+import errorMessages from "../services/middlewares/error_messages";
+import errorResponse from "../services/middlewares/error_response";
+import envConfig from "./env";
+import routes from "../api";
+
+const { appConfig } = envConfig;
+const app = express();
+const spec = swaggerDoc({
+  swaggerDefinition: {
+    info: {
+      title: "API",
+      version: "1.0.0"
+    },
+    basePath: `${appConfig.basePath}${appConfig.path}`
+  },
+  apis: [
+    `${path.resolve()}/src/api/**/*.controller.js`,
+    `${path.resolve()}/src/api/**/*.model.js`,
+    `${path.resolve()}/src/api/**/index.js`
+  ]
+});
+
+app.disable("x-powered-by");
+app.use(methodOverride("X-HTTP-Method-Override"));
+
+if (appConfig.env === "development") {
+  app.use(morgan("dev"));
+  app.use(
+    bodyParser.urlencoded({
+      extended: true
+    })
+  );
+}
+
+app.use(bodyParser.json());
+app.use(cors());
+
+app.use(`${appConfig.basePath}${appConfig.path}`, routes);
+
+swaggerTools.initializeMiddleware(spec, middleware => {
+  app.use(
+    middleware.swaggerUi({
+      apiDocs: `${appConfig.basePath}${appConfig.path}/docs.json`,
+      swaggerUi: `${appConfig.basePath}${appConfig.path}/docs`,
+      apiDocsPrefix: `${appConfig.basePath}${appConfig.path}`,
+      swaggerUiPrefix: "/"
+    })
+  );
+});
+
+app.use(errorMessages);
+app.use(errorResponse);
+
+app.locals.config = appConfig;
+
+export default app;
