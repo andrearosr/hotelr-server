@@ -28,7 +28,7 @@ Clone this repo into your preferred location.
 
 1. With either host name, the API root is `/api/v1/`.
 
-If using remote server, you can browse the full API documentation [here](https://hotelrapi.herokuapp.com/api/v1/docs/#/).
+If using remote server, you can browse the full API documentation [here](http://hotelrapi.herokuapp.com/api/v1/docs/#/).
 
 If using a local server, you can browse it [here](http://127.0.0.1:5000/api/v1/docs)
 

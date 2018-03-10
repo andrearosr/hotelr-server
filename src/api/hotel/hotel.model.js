@@ -19,15 +19,12 @@ const Schema = mongoose.Schema;
  *         type: string
  *       description:
  *         type: string
+ *       address:
+ *         type: string
  *       images:
  *        type: array
  *        items:
  *          type: string
- *       location:
- *        type: array
- *        items:
- *          type: number
- *          format: float
  *     required:
  *       - name
  *       - description
@@ -41,14 +38,14 @@ const HotelSchema = new Schema(
     },
     description: {
       type: String,
-      required: "name is required"
+      required: "description is required"
+    },
+    address: {
+      type: String,
     },
     images: [{
       type: String
-    }],
-    location: [{
-      type: Number
-    }],
+    }]
   },
   {
     timestamps: true,
