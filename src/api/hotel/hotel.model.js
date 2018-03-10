@@ -21,10 +21,25 @@ const Schema = mongoose.Schema;
  *         type: string
  *       address:
  *         type: string
+ *       website:
+ *         type: string
  *       images:
  *        type: array
  *        items:
  *          type: string
+ *       reviews:
+ *        type: array
+ *        items:
+ *          type: object
+ *          properties:
+ *           by:
+ *             type: string
+ *           hotel:
+ *             type: string
+ *           rating:
+ *             type: integer
+ *           review:
+ *             type: string
  *     required:
  *       - name
  *       - description
@@ -43,8 +58,21 @@ const HotelSchema = new Schema(
     address: {
       type: String,
     },
+    website: {
+      type: String,
+    },
     images: [{
       type: String
+    }],
+    // Using embedded documents instead of references because it's a "one to few" relation
+    reviews: [{
+      by: String,
+      review: String,
+      rating: {
+        type: Number,
+        min: 1,
+        max: 5,
+      }
     }]
   },
   {
