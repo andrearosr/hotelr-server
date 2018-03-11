@@ -33,40 +33,28 @@ If using a local server, you can browse it [here](http://127.0.0.1:5000/api/v1/d
 
 ### Available endpoints
 
-1. Get hotels:
+***1. Get hotels:***
 
-**Endpoint:** `GET /hotels`
-
-**Headers:** none
-
-**Query Params:** none
-
-**Path Params:** none
-
+**Endpoint:** `GET /hotels`\
+**Headers:** none\
+**Query Params:** none\
+**Path Params:** none\
 **Body:** none
 
-2. Get hotel by id:
+***2. Get hotel by id:***
 
-**Endpoint:** `GET /hotels/:id`
+**Endpoint:** `GET /hotels/:id`\
+**Headers:** none\
+**Query Params:** none\
+**Path Params:** `:id` -> id property of the selected hotel\
+**Body:** none\
 
-**Headers:** none
+***3. Add review:***
 
-**Query Params:** none
-
-**Path Params:** `:id` -> id property of the selected hotel
-
-**Body:** none
-
-3. Add review:
-
-**Endpoint:** `PATCH /hotels/:id/add-review`
-
-**Headers:** none
-
-**Query Params:**  `:id` -> id property of the selected hotel
-
-**Path Params:** none
-
-**Body:** Object: `{ by: String, rating: Integer, review: String }` Required: by, rating
+**Endpoint:** `PATCH /hotels/:id/add-review`\
+**Headers:** none\
+**Query Params:**  `:id` -> id property of the selected hotel\
+**Path Params:** none\
+**Body:** Object: `{ by: String, rating: Integer, review: String }` Required: by, rating\
 
 **Note:** The `master` branch on the Mobile Client uses the Heroku server (a). If you want to easily switch to a local server (b), use the `local-server` branch on the client.
