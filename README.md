@@ -12,7 +12,6 @@ Clone this repo into your preferred location.
 #### Running Mobile Client
 
 1. From the project root, run `npm install`
-2. To run tests, run `npm run test` or `npm run watch` to watch for file changes
 
 **Using the remote server (a)**
 
@@ -26,10 +25,36 @@ Clone this repo into your preferred location.
 
 #### Using the REST API
 
-1. With either host name, the API root is `/api/v1/`.
+1. The API root is `:hostname/api/v1/`.
 
 If using remote server, you can browse the full API documentation [here](http://hotelrapi.herokuapp.com/api/v1/docs/#/).
 
 If using a local server, you can browse it [here](http://127.0.0.1:5000/api/v1/docs)
 
-**Note:** The `master` branch on the Mobile Client uses the Heroku server (a). If you want to easily switch to a local server (b), use the `local-server` branch.
+#### Endpoints
+
+1. Get hotels:
+
+**Endpoint:** `GET /hotels`
+**Headers:** none
+**Query Params:** none
+**Path Params:** none
+**Body:** none
+
+2. Get hotel by id:
+
+**Endpoint:** `GET /hotels/:id`
+**Headers:** none
+**Query Params:** none
+**Path Params:** `:id` -> id property of the selected hotel
+**Body:** none
+
+3. Add review:
+
+**Endpoint:** `PATCH /hotels/:id/add-review`
+**Headers:** none
+**Query Params:**  `:id` -> id property of the selected hotel
+**Path Params:** none
+**Body:** Object: `{ by: String, rating: Integer, review: String }` Required: by, rating
+
+**Note:** The `master` branch on the Mobile Client uses the Heroku server (a). If you want to easily switch to a local server (b), use the `local-server` branch on the client.
