@@ -1,15 +1,15 @@
 # Hotelr API - Browse hotels with your fingertips
 
-### Getting started
+## Getting started
 
 Clone this repo into your preferred location.
 
-### Requirements
+## Requirements
 
 1. Node 7.6+
 2. Mongo 3.6+
 
-### Running Mobile Client
+## Running Mobile Client
 
 1. From the project root, run `npm install`
 
@@ -23,7 +23,7 @@ Clone this repo into your preferred location.
 4. From the project root directory, run `npm run load-hotels && npm run load-reviews`. This will initialize sufficient documents to test all features of the Mobile Client.
 5. Run `npm run dev`. This will set up a server running on `http://127.0.0.1` connected to the local mongo database.
 
-### Using the REST API
+## Using the REST API
 
 1. The API root is `:hostname/api/v1/`.
 
@@ -41,6 +41,7 @@ If using a local server, you can browse it [here](http://127.0.0.1:5000/api/v1/d
 **Path Params:** none\
 **Body:** none
 
+
 ***2. Get hotel by id:***
 
 **Endpoint:** `GET /hotels/:id`\
@@ -48,6 +49,7 @@ If using a local server, you can browse it [here](http://127.0.0.1:5000/api/v1/d
 **Query Params:** none\
 **Path Params:** `:id` -> id property of the selected hotel\
 **Body:** none\
+
 
 ***3. Add review:***
 
