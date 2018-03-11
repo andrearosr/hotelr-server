@@ -33,6 +33,11 @@ const HotelController = {
    *         in: query
    *         required: false
    *         type: string
+   *       - name: q
+   *         description: text query.
+   *         in: query
+   *         required: false
+   *         type: string
    *     responses:
    *       200:
    *         description: Returns an array of hotels
@@ -43,18 +48,30 @@ const HotelController = {
    */
 
   async readAll(req, res) {
+    const q = req.query.q || "";
     const offset = paginate.offset(req.query.offset);
     const limit = paginate.limit(req.query.limit);
 
-    const find = req.query.find ? JSON.parse(req.query.find) : {};
-    const sort = req.query.sort
-      ? JSON.parse(req.query.sort)
-      : {
-          createdAt: 1
-        };
+    let query
+
+    if (q.length) {
+      query = [
+        { "$match": { "name": { "$regex": q, "$options": "i" } } }
+        // { "$sort": { score: { $meta: "textScore" } } }
+      ]
+    } else {
+      const sort = req.query.sort && Object.keys(req.query.sort).length > 0
+        ? JSON.parse(req.query.sort)
+        : { createdBy: -1 };
+
+
+      query = [
+        { "$sort": sort }
+      ]
+    }
 
     const hotels = await Hotel.aggregate([
-      { "$sort": sort },
+      ...query,
       {
         "$facet": {
           docs: [
