@@ -22,12 +22,14 @@
     {
       "by": "Amaia Montenegro",
       "review": "Nunca había experimentado algo similar. La vista en la habitación era fenomenal, el servicio fantástico, y la comida clase mundial.",
-      "rating": 5
+      "rating": 5,
+      "_id": "5aa53fc46e6c40c239ff0224"
     },
     {
       "by": "Sergei Gurlugovich",
       "review": "Mi esposa y yo llegamos a las 11:00 PM tras un largo vuelo para descubrir que nuestra habitación no estaba lista, tuvimos que esperar 45 minutos para asentarnos. El resto de la experiencia estuvo bastante bien, los restaurantes y la piscina son muy buenos.",
-      "rating": 3
+      "rating": 3,
+      "_id": "5aa53fcd6e6c40c239ff0225"
     }
   ]
 }
@@ -56,12 +58,14 @@
     {
       "by": "Andrea D'Rossi",
       "review": "Esta ha sido mi peor experiencia en hoteles. Los botones fueron groseros, y uno de nuestros teléfonos fue robado de una maleta cerrada con llave. La piscina estuvo cerrada por 4 de los 5 días que estuvimos allí, y los calamares de la cena del viernes estaban pasados. El chef, indiferente. ¡Evitar este hotel!",
-      "rating": 1
+      "rating": 1,
+      "_id": "5aa5401cb09c10c2734e44eb"
     },
     {
       "by": "Helga Eckhart",
       "review": "Muy buena experiencia en general. El servicio al cliente podría mejorar, pero las instalaciones son increíbles.",
-      "rating": 4
+      "rating": 4,
+      "_id": "5aa54025b09c10c2734e44ec"
     }
   ]
 }
@@ -89,12 +93,14 @@
     {
       "by": "Karl Stockhausen",
       "review": "Buen hotel, de habitaciones cómodas y amplias. El servicio al cliente fue un poco deficiente, pero el personal estaba muy ajetreado por ser temporada alta. Los servicios adicionales fueron de mi agrado.",
-      "rating": 4
+      "rating": 4,
+      "_id": "5aa540421ce744c28eb8258b"
     },
     {
       "by": "Mireya Perdomo",
       "review": "Fantástico hotel que sobrepasó mis expectativas. Altamente recomendado por la vista, trato al huésped, calidad de la comida, y limpieza de la piscina. ¡Lo tragos en la barra también estuvieron deliciosos!",
-      "rating": 5
+      "rating": 5,
+      "_id": "5aa5404a1ce744c28eb8258c"
     }
   ]
 }
@@ -122,12 +128,14 @@
     {
       "by": "Guillermo Salazar",
       "review": "Me pareció muy cómodo y amigable. No es gran cosa, pero está bien para su precio.",
-      "rating": 4
+      "rating": 4,
+      "_id": "5aa54063e436f1c29ebdf63f"
     },
     {
       "by": "Frank Melo",
       "review": "Este hotel es muy económico para su calidad. Me sorprendió el tamaño de las habitaciones y la buena atención del personal. Lo recomiendo plenamente.",
-      "rating": 5
+      "rating": 5,
+      "_id": "5aa5406de436f1c29ebdf640"
     }
   ]
 }
@@ -155,12 +163,14 @@
     {
       "by": "Rowena McAllister",
       "review": "¡El mejor hotel de la zona! Viajo regularmente a la ciudad y este hotel es honestamente el número 1. Recomiendo las cabañas junto a la piscina.",
-      "rating": 5
+      "rating": 5,
+      "_id": "5aa54085dbbd14c2ad1b9976"
     },
     {
       "by": "Laura Martínez",
       "review": "Experiencia agradable, salvo por el problema que tuvimos con la calefacción en la habitación. ¡Tuvimos que pasar tres noches con la habitación a 8 °C!",
-      "rating": 4
+      "rating": 4,
+      "_id": "5aa5408bdbbd14c2ad1b9977"
     }
   ]
 }
@@ -189,17 +199,20 @@
     {
       "by": "Charles Moriarty",
       "review": "Exquisita comida y agradable atención hacen de este mi hotel favorito en la ciudad",
-      "rating": 5
+      "rating": 5,
+      "_id": "5aa540a12a3d3fc2ba7c4476"
     },
     {
       "by": "Godric Kjellberg",
       "review": "No tuvimos la oportunidad de probar la piscina pues estuvo en \"mantenimiento\" todo el fin de semana... ¡En temporada alta! Recepción no nos trató bien, pero de la puerta de la habitación hacia adentro, una buena experiencia.",
-      "rating": 3
+      "rating": 3,
+      "_id": "5aa540a72a3d3fc2ba7c4477"
     },
     {
       "by": "Hideki Kojima",
       "review": "El personal no se destacó por su amabilidad, la comida fue un poco sosa, pero la habitación estuvo muy limpia. Lamentablemente, el servicio a la habitación no funciona después de las cinco de la tarde, lo cual es una falta grave para mí.",
-      "rating": 2
+      "rating": 2,
+      "_id": "5aa540ae2a3d3fc2ba7c4478"
     }
   ]
 }

@@ -170,6 +170,65 @@ const HotelController = {
     if (!hotel) throw new APIError(`Hotel not found ${id}`, status.NOT_FOUND);
     return res.json(hotel);
   },
+
+  /**
+    * @swagger
+    * definition:
+    *   Review:
+    *     type: object
+    *     properties:
+    *       by:
+    *         type: string
+    *       rating:
+    *         type: integer
+    *       review:
+    *         type: string
+    *     required:
+    *       - by
+    *       - rating
+    * /hotels/{id}/add-review:
+    *   patch:
+    *     tags:
+    *      - Hotel
+    *     description: Adds a review to a hotel.
+    *     produces:
+    *       - application/json
+    *     parameters:
+    *       - name: id
+    *         in: path
+    *         required: true
+    *         description: hotel id
+    *         type: string
+    *       - name: review
+    *         description: The information of the review
+    *         in: body
+    *         required: true
+    *         schema:
+    *           $ref: '#/definitions/Review'
+    *     responses:
+    *       200:
+    *         description: Add review
+    *         schema:
+    *          type: array
+    *          items:
+    *           $ref: '#/definitions/Hotel'
+    */
+  async addReview(req, res) {
+    const { id } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      throw new APIError(`Invalid objectId`, status.BAD_REQUEST);
+    }
+
+    const hotel = await Hotel.findById(id)
+
+    if (!hotel) throw new APIError('Hotel not found', status.NOT_FOUND);
+
+    hotel.reviews.push(req.body);
+    const updatedHotel = await hotel.save();
+
+    res.status(status.OK).json(updatedHotel);
+  }
 }
 
 export default HotelController;

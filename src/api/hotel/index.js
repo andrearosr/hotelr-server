@@ -19,4 +19,8 @@ router
   .route("/hotels/:id")
   .get(validate(hotelValidator.findById), catchErrors(Hotel.findById));
 
+router
+  .route("/hotels/:id/add-review")
+  .patch(validate(hotelValidator.addReview), catchErrors(Hotel.addReview))
+
 export default router;

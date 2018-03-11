@@ -41,8 +41,6 @@ const Schema = mongoose.Schema;
  *          properties:
  *           by:
  *             type: string
- *           hotel:
- *             type: string
  *           rating:
  *             type: integer
  *           review:
