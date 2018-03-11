@@ -53,11 +53,43 @@ const HotelController = {
           createdAt: 1
         };
 
-    const hotels = await Hotel.paginate(find, {
-      sort,
-      offset,
-      limit
-    });
+    const hotels = await Hotel.aggregate([
+      { "$sort": sort },
+      {
+        "$facet": {
+          docs: [
+            { "$limit": limit },
+            { "$addFields": {
+                "average_rating": {
+                  "$divide": [
+                    { // expression returns total
+                      "$reduce": {
+                        "input": "$reviews",
+                        "initialValue": 0,
+                        "in": { "$add": ["$$value", "$$this.rating"] }
+                      }
+                    },
+                    { // expression returns ratings count
+                    "$cond": [
+                        { "$ne": [ { "$size": "$reviews" }, 0 ] },
+                        { "$size": "$reviews" },
+                        1
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "$project": {
+                "reviews": 0
+              }
+            }
+          ]
+        },
+      }
+    ])
+
     res.json(hotels);
   },
 
@@ -91,7 +123,33 @@ const HotelController = {
       throw new APIError(`Invalid objectId`, status.BAD_REQUEST);
     }
 
-    const hotel = await Hotel.findById(id);
+    const hotel = await Hotel.aggregate([
+      { "$match": { "id": id } },
+      {
+        "$addFields": {
+            "average_rating": {
+                "$divide": [
+                    { // expression returns total
+                        "$reduce": {
+                            "input": "$reviews",
+                            "initialValue": 0,
+                            "in": { "$add": ["$$value", "$$this.rating"] }
+                        }
+                    },
+                    { // expression returns ratings count
+                        "$cond": [
+                            { "$ne": [ { "$size": "$reviews" }, 0 ] },
+                            { "$size": "$reviews" },
+                            1
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+    ]);
+
+
     if (!hotel) throw new APIError(`Hotel not found ${id}`, status.NOT_FOUND);
     return res.json(hotel);
   },

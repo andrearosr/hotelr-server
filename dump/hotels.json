@@ -1,17 +1,24 @@
 {
+  "_id": {
+    "$oid": "5aa424f4ee16eb0b978b462c"
+  },
   "id": "5aa424f4ee16eb0b978b462c",
   "name": "Hesperia Lanzarote",
   "address": "Cortijo Viejo, s/n, 35570 Puerto Calero, Las Palmas, Spain",
   "price": 365,
   "priceCurrency": "EUR",
   "website": "https://www.nh-hotels.com/hotel/hesperia-lanzarote",
-  "description": "Come join us at the end of the world, free of metropolitan hassle and mundane distractions. Enjoy one of our villas or experience our minimalistic cabins right at the Edge of the World",
+  "location": {
+    "latitude": 28.917161,
+    "longitude": -13.711068
+  },
+  "description": "Acompáñanos en el rincón del mundo, líbrate del desorden urbano y las distracciones mundanas. Disfruta nuestras villas o vive la experiencia en nuestras cabañas minimalistas, ¡acá en el borde del mundo!",
   "images": [
     "https://www.dropbox.com/s/ldl0n16jc5rv4f2/hesperia-lanzarote.jpg?raw=1",
     "https://www.dropbox.com/s/m2sui0i7e0ua4h5/hesperia-lanzarote-2.jpg?raw=1",
     "https://www.dropbox.com/s/gx5lhqcrp8mtsi5/hesperia-lanzarote-3.jpg?raw=1"
   ],
-  "ratings": [
+  "reviews": [
     {
       "by": "Amaia Montenegro",
       "review": "Nunca había experimentado algo similar. La vista en la habitación era fenomenal, el servicio fantástico, y la comida clase mundial.",
@@ -25,20 +32,27 @@
   ]
 }
 {
+  "_id": {
+    "$oid": "5aa431dd2c3ae8bf2762c35a"
+  },
   "id": "5aa431dd2c3ae8bf2762c35a",
   "name": "Catalonia Riviera Maya",
   "price": 299,
   "priceCurrency": "MXN",
   "address": "Av. Xcacel, Plano 2, Lote 1 Manzana 18, 77783 Puerto Aventuras, Quintana Roo, Mexico",
   "website": "https://www.cataloniarivieramaya.com/",
-  "description": "Riviera Maya is a small paradise to enjoy in style. Discovering its mesmerizing landscapes and captivating beaches is a real pleasure for nature lovers",
+  "location": {
+    "latitude": 20.503962,
+    "longitude": -87.220214
+  },
+  "description": "Riviera Maya es un pequeño paraíso con estilo. Los amantes de la naturaleza adoran descubrir sus cautivadoras playas y hermosas vistas.",
   "images": [
   	"https://www.dropbox.com/s/17gepyh1ej6ya64/catalonia-riviera-maya-4.jpg?raw=1",
   	"https://www.dropbox.com/s/54abk9taicknwz6/catalonia-riviera-maya-3.jpg?raw=1",
   	"https://www.dropbox.com/s/u9qku20e8o736u9/catalonia-riviera-maya-2.jpg?raw=1",
   	"https://www.dropbox.com/s/u603exhkijtum7s/catalonia-riviera-maya-1.jpg?raw=1"
   ],
-  "ratings": [
+  "reviews": [
     {
       "by": "Andrea D'Rossi",
       "review": "Esta ha sido mi peor experiencia en hoteles. Los botones fueron groseros, y uno de nuestros teléfonos fue robado de una maleta cerrada con llave. La piscina estuvo cerrada por 4 de los 5 días que estuvimos allí, y los calamares de la cena del viernes estaban pasados. El chef, indiferente. ¡Evitar este hotel!",
@@ -52,19 +66,26 @@
   ]
 }
 {
+  "_id": {
+    "$oid": "5aa431ee2c3ae8bf2762c35b"
+  },
   "id": "5aa431ee2c3ae8bf2762c35b",
   "name": "Hotel Vitale",
   "price": 320,
   "priceCurrency": "USD",
   "address": "8 Mission Street, San Francisco, CA 94105",
   "website": "https://www.jdvhotels.com/hotels/california/san-francisco/hotel-vitale",
-  "description": "Relax and rejuvenate at the waterfront’s only luxury boutique hotel, with stunning views of the Embarcadero, one of the most provocative and beautiful areas in the Bay Area",
+  "location": {
+    "latitude": 37.793612,
+    "longitude": -122.393116
+  },
+  "description": "Relájate y rejuvenécete en el único hotel boutique lujoso al frente del mar, con hermosas vistas al Embarcadero, una de las áreas más hermosas y provocativas en la Bahía.",
   "images": [
     "https://www.dropbox.com/s/ey3qn756k63h418/hotel-vitale-3.jpg?raw=1",
     "https://www.dropbox.com/s/uswb1bgmxwbftzn/hotel-vitale-2.jpg?raw=1",
     "https://www.dropbox.com/s/smbut0tdo5zakai/hotel-vitale-1.jpg?raw=1"
   ],
-  "ratings": [
+  "reviews": [
     {
       "by": "Karl Stockhausen",
       "review": "Buen hotel, de habitaciones cómodas y amplias. El servicio al cliente fue un poco deficiente, pero el personal estaba muy ajetreado por ser temporada alta. Los servicios adicionales fueron de mi agrado.",
@@ -78,19 +99,26 @@
   ]
 }
 {
+  "_id": {
+    "$oid": "5aa432092c3ae8bf2762c35c"
+  },
   "id": "5aa432092c3ae8bf2762c35c",
   "name": "Kempinski Hotel Adriatic",
   "price": 790,
   "priceCurrency": "USD",
   "address": "Alberi 300 A, 52475 Savudrija Istria, Croatia",
   "website": "https://www.kempinski.com/en/istria/hotel-adriatic/",
-  "description": "Visit Kempinski Hotel Adriatic, the prestigious Croatian five-star luxury seaside golf-and-spa resort, located in the Umag countryside in northwestern Istria",
+  "location": {
+    "latitude": 45.497682,
+    "longitude": 13.528199
+  },
+  "description": "Visita el Kempinski Hotel Adriatic, el prestigioso resort croata cinco estrellas al frente del mar con golf y spa, ubicado en el campo de Umag, al noroeste de Istria",
   "images": [
     "https://www.dropbox.com/s/489caja8t9b3k5q/kempinski-hotel-adriatic-3.jpg?raw=1",
     "https://www.dropbox.com/s/mx86ccfx7pyiu8f/kempinski-hotel-adriatic-2.jpg?raw=1",
     "https://www.dropbox.com/s/flxcw8dm40690sy/kempinski-hotel-adriatic-1.jpg?raw=1"
   ],
-  "ratings": [
+  "reviews": [
     {
       "by": "Guillermo Salazar",
       "review": "Me pareció muy cómodo y amigable. No es gran cosa, pero está bien para su precio.",
@@ -104,19 +132,26 @@
   ]
 }
 {
+  "_id": {
+    "$oid": "5aa432112c3ae8bf2762c35d"
+  },
   "id": "5aa432112c3ae8bf2762c35d",
   "name": "Hotel H10 Salou Princess",
   "price": 899,
   "priceCurrency": "USD",
   "address": "Av. Principat d'Andorra, 15 E-43840-Next to PortAventura Salou",
   "website": "https://www.h10hotels.com/en/salou-hotels/h10-salou-princess",
-  "description": "H10 Salou Princess is located next to Plaza de Europa in one of Salou’s liveliest shopping areas, and near the beach. The hotel, featuring the recently renovated Tarraco Restaurant, offers a wide range of services, including a variety of dining options, an extensive entertainment programme for all ages and a large swimming pool with sunlounger area and Jacuzzi",
+  "location": {
+    "latitude": 41.075834,
+    "longitude": 1.144047
+  },
+  "description": "El H10 Salou Princess está ubicado al lado de Plaza de Europa, en una de las mejores zonas comerciales de Salou, cerca de la playa. El hotel, con su recientemente remodelado Tarraco Restaurant, ofrece una variedad de servicios, incluyendo opciones para cenar, un programa extenso de entretenimiento para todas las edades, y una gran piscina que cuenta con solar y Jacuzzi.",
   "images": [
     "https://www.dropbox.com/s/l61o8qetzvpnxpp/h10-salou-princess-3.jpg?raw=1",
     "https://www.dropbox.com/s/swhoepr4d24v3yd/h10-salou-princess-2.jpg?raw=1",
     "https://www.dropbox.com/s/82asj4kahhif4u5/h10-salou-princess-1.jpg?raw=1"
   ],
-  "ratings": [
+  "reviews": [
     {
       "by": "Rowena McAllister",
       "review": "¡El mejor hotel de la zona! Viajo regularmente a la ciudad y este hotel es honestamente el número 1. Recomiendo las cabañas junto a la piscina.",
@@ -130,20 +165,27 @@
   ]
 }
 {
+  "_id": {
+    "$oid": "5aa4321b2c3ae8bf2762c35e"
+  },
   "id": "5aa4321b2c3ae8bf2762c35e",
   "name": "Qiu Hotel Sukhumvit",
   "price": 635,
   "priceCurrency": "USD",
   "address": "9 Soi Sukhumvit 79 (Niyom) Phrakhanong Nua, Wattana, Wattana, 10260 Bangkok, Thailand",
   "website": "https://www.qiuhotel.com",
-  "description": "Qiu Hotel is a unique residential offering of 78 contemporary apartments lying in the heart of Sukhumvit district with convenient a prime location perfectly situated with access to a Bangkok’s city life",
+  "location": {
+    "latitude": 13.707264,
+    "longitude": 100.601253
+  },
+  "description": "Qiu Hotel es una oferta única en acomodaciones, con 78 apartamentos contemporáneos en el corazón del distrito de Sukhumvit, con una ubicación conveniente en acceso a la vida urbana de Bangkok.",
   "images": [
     "https://www.dropbox.com/s/xvs6tsaktt21xyf/qiu-hotel-sukhumvit-4.jpg?raw=1",
     "https://www.dropbox.com/s/lak93uc9w6t1pip/qiu-hotel-sukhumvit-3.JPEG?raw=1",
     "https://www.dropbox.com/s/107r1ahzpxrpxb2/qiu-hotel-sukhumvit-2.jpg?raw=1",
     "https://www.dropbox.com/s/iyp7t0fvr9o8in3/qiu-hotel-sukhumvit-1.jpg?raw=1"
   ],
-  "ratings": [
+  "reviews": [
     {
       "by": "Charles Moriarty",
       "review": "Exquisita comida y agradable atención hacen de este mi hotel favorito en la ciudad",
