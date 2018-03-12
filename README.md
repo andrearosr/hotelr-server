@@ -9,7 +9,7 @@ Clone this repo into your preferred location.
 1. Node 7.6+
 2. Mongo 3.6+
 
-## Running Mobile Client
+## Running
 
 1. From the project root, run `npm install`
 
