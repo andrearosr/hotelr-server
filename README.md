@@ -20,7 +20,7 @@ Clone this repo into your preferred location.
 **If you want to run a local server (b)**
 
 3. To run in development mode, you need to initialize your local mongo driver. [Install mongo](https://docs.mongodb.com/manual/installation/) if you haven't already, create a `~/data/db` directory and run `mongod` to initialize driver and listen for incoming connections at `mongo://localhost`
-4. From the project root directory, run `npm run load-hotels && npm run load-reviews`. This will initialize sufficient documents to test all features of the Mobile Client.
+4. From the project root directory, run `npm run load-hotels`. This will initialize sufficient documents to test all features of the Mobile Client.
 5. Run `npm run dev`. This will set up a server running on `http://127.0.0.1` connected to the local mongo database.
 
 ## Using the REST API
